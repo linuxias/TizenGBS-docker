@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: docker/docker:stable
+    working_directory: ~/repo
+    steps:
+      - checkout
+
+      ### This configuration is enable to build a docker image.
+      - setup_remote_docker:
+          docker_layer_caching: true
+      ###
+      - run: docker build -t test ./
