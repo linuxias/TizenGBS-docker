@@ -30,10 +30,10 @@ tizen               latest              29931db3eead        About a minute ago  
 
 ## Run container
 
-####1. using build image
+#### 1. using build image
 $docker run --name tizen_builder --it --privileged -v ${SOURCE_PATH}:/home/user_id/path tizen
 
-####2. using docker hub
+#### 2. using docker hub
 ```bash
 $docker run --name tizen_builder --it --privileged -v ${SOURCE_PATH}:/home/user_id/path linuxias/tizen_gbs
 ```
