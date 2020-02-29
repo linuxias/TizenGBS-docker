@@ -15,7 +15,7 @@ RUN groupadd -r ${GROUP} && \
 		useradd --create-home --shell /bin/bash -g ${GROUP} --uid ${UID} ${USER} && \
 		echo "${USER}:${PW}" | chpasswd
 
-ADD https://github.com/linuxias/TizenGBS-docker/blob/master/gbs.conf /home/${USER}/.gbs.conf
+ADD https://raw.githubusercontent.com/linuxias/TizenGBS-docker/master/gbs.conf /home/${USER}/.gbs.conf
 RUN chown ${USER}:${GROUP} /home/gbs-builder/.gbs.conf
 
 USER gbs-builder
