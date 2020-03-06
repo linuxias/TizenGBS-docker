@@ -38,7 +38,7 @@ $docker run --name tizen_builder -it --privileged -v ${SOURCE_PATH}:/home/user_i
 
 #### 2. using docker hub
 ```bash
-$docker run --name tizen_builder -it --privileged -v ${SOURCE_PATH}:/home/user_id/path linuxias/tizen_gbs
+$docker run --name tizen_builder -it --privileged -v ${SOURCE_PATH}:/home/gbs-builder/{path} linuxias/tizen_gbs
 ```
 
 ### Remove image
