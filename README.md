@@ -11,6 +11,7 @@ Build docker image. If you don't set user id, pw, etc., 'gbs-builder' is the def
  ```bash
  $sudo docker build -t tizen .
  ```
+ 
 #### 2. Build docker image with args
 If you want to set user and group, you can build below:
 ```bash
@@ -31,7 +32,9 @@ tizen               latest              29931db3eead        About a minute ago  
 ## Run container
 
 #### 1. using build image
+```bash
 $docker run --name tizen_builder --it --privileged -v ${SOURCE_PATH}:/home/user_id/path tizen
+```
 
 #### 2. using docker hub
 ```bash
