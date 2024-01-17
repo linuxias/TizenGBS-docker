@@ -1,12 +1,14 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 LABEL maintainer = "Seungha Son <linuxias@gmail.com>"
+
 ARG USER=gbs-builder
 ARG GROUP=gbs-builder
 ARG UID=1000
 ARG GID=1000
 ARG PW=gbs-builder
+ARG DEBIAN_FRONTEND=noninteractive
 
-RUN echo "deb [trusted=yes] http://download.tizen.org/tools/latest-release/Ubuntu_16.04/ /" >> /etc/apt/sources.list
+RUN echo "deb [trusted=yes] http://download.tizen.org/tools/latest-release/Ubuntu_20.04/ /" | tee /etc/apt/sources.list.d/tizen.list > /dev/null
 
 RUN apt-get update
 RUN apt-get install gbs -y
